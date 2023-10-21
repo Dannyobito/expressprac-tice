@@ -1,10 +1,12 @@
 const path = require('path');
 
 function getMessages(req, res) {
-  res.json({
-    title: 'Messages to my Friends!',
-    description: 'Hello Friends',
-  });
+  // res.send({
+  //   title: 'Messages to my Friends!',
+  //   description: 'Hello Friends',
+  // });
+  
+  res.sendFile(path.join(__dirname, '..' ,'public', 'skimountain.jpg'))
   
 }
 

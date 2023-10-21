@@ -2,7 +2,6 @@ const express = require('express');
 const path = require('path');
 
 const friendsRouter = require('./routes/friends.router.js');
-const messages= require('./controllers/messages.controller');
 const messagesRouter = require('./routes/messages.router.js');
 
 
