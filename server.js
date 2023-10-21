@@ -1,8 +1,10 @@
 const express = require('express');
 const path = require('path');
 
-const friends = require('./controllers/friends.controller');
+const friendsRouter = require('./routes/friends.router.js');
 const messages= require('./controllers/messages.controller');
+const messagesRouter = require('./routes/messages.router.js');
+
 
 const app = express();
 
@@ -18,13 +20,9 @@ app.use((req, res, next) => {
 app.use(express.json());
 
 
-app.get('/friends', friends.getFriends);
-app.get('/friends/:friendId', friends.getFriend);
-app.post('/friends', friends.postFriend);
 
-app.get('/messages', messages.getMessages);
-app.post('/messages', messages.postMessage);
-
+app.use('/friends',friendsRouter)
+app.use('/messages', messagesRouter)
 app.listen(PORT, () => {
   console.log(`Listening on ${PORT}...`);
 });
