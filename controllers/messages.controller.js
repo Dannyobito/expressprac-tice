@@ -6,8 +6,11 @@ function getMessages(req, res) {
   //   description: 'Hello Friends',
   // });
   
-  res.sendFile(path.join(__dirname, '..' ,'public', 'images', 'skimountain.jpg'))
-  
+  // res.sendFile(path.join(__dirname, '..' ,'public', 'images', 'skimountain.jpg'))
+  res.render('messages', {
+    title: 'Messages to my Friends',
+    friend: 'Isaac Newton'
+  })
 }
 
 function postMessage(req, res) {
