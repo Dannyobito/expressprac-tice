@@ -6,7 +6,7 @@ function getMessages(req, res) {
   //   description: 'Hello Friends',
   // });
   
-  res.sendFile(path.join(__dirname, '..' ,'public', 'skimountain.jpg'))
+  res.sendFile(path.join(__dirname, '..' ,'public', 'images', 'skimountain.jpg'))
   
 }
 
